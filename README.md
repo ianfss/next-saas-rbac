@@ -6,18 +6,18 @@ This project contains all the necessary boilerplate to setup a multi-tenant SaaS
 
 ### Authentication
 
-- [ ] It should be able to authenticate using email and password;
-- [ ] It should be able to authenticate using a GitHub account;
-- [ ] It should be able to recover password using email;
+- [x] It should be able to authenticate using email and password;
+- [x] It should be able to authenticate using a GitHub account;
+- [x] It should be able to recover password using email;
 - [x] It should be able to create an account (email, name and password);
 
 ### Organization
 
-- [ ] It should be able to create a new organization;
-- [ ] It should be able to get organizations which the user belongs;
-- [ ] It should be able to update an organization;
-- [ ] It should be able to shutdown an organzation;
-- [ ] It should be able to transfer organization ownership;
+- [x] It should be able to create a new organization;
+- [x] It should be able to get organizations which the user belongs;
+- [x] It should be able to update an organization;
+- [x] It should be able to shutdown an organzation;
+- [x] It should be able to transfer organization ownership;
 
 ### Invites
 
