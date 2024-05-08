@@ -12,12 +12,12 @@ import {
 } from 'fastify-type-provider-zod'
 
 import { errorHandler } from './error-handler'
-import { authenticateWithGitHub } from './routes/authenticate-with-github'
-import { authenticateWithPassword } from './routes/authenticate-with-password'
-import { createAccount } from './routes/create-account'
-import { getProfile } from './routes/get-profile'
-import { requestPasswordRecover } from './routes/request-password-recover'
-import { resetPassword } from './routes/reset-password'
+import { authenticateWithGitHub } from './routes/auth/authenticate-with-github'
+import { authenticateWithPassword } from './routes/auth/authenticate-with-password'
+import { createAccount } from './routes/auth/create-account'
+import { getProfile } from './routes/auth/get-profile'
+import { requestPasswordRecover } from './routes/auth/request-password-recover'
+import { resetPassword } from './routes/auth/reset-password'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
