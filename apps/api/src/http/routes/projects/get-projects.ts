@@ -45,7 +45,7 @@ export async function getProjects(app: FastifyInstance) {
           },
         },
       },
-      async (request, reply) => {
+      async (request) => {
         const { slug } = request.params
 
         const { membership, organization } =
@@ -87,7 +87,7 @@ export async function getProjects(app: FastifyInstance) {
           },
         })
 
-        return reply.send({ projects })
+        return { projects }
       },
     )
 }
