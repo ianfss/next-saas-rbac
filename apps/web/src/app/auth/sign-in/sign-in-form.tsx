@@ -14,7 +14,7 @@ import { Label } from '@/components/ui/label'
 import { Separator } from '@/components/ui/separator'
 import { useFormState } from '@/hooks/use-form-state'
 
-import { signInWithGitHub } from '../actions'
+import { signInWithGitHub, signInWithGoogle } from '../actions'
 import { signInWithEmailAndPassword } from './actions'
 
 export function SignInForm() {
@@ -82,10 +82,12 @@ export function SignInForm() {
           Sign in with GitHub
         </Button>
       </form>
-      <Button type="submit" variant="outline" className="w-full">
-        <Image src={googleIcon} className="mr-2 size-4" alt="" />
-        Sign in with Google
-      </Button>
+      <form action={signInWithGoogle}>
+        <Button type="submit" variant="outline" className="w-full">
+          <Image src={googleIcon} className="mr-2 size-4" alt="" />
+          Sign in with Google
+        </Button>
+      </form>
     </div>
   )
 }
