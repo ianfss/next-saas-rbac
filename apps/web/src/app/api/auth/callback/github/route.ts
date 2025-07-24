@@ -17,7 +17,9 @@ export async function GET(request: NextRequest) {
 
   const { token } = await signInWithGitHub({ code })
 
-  cookies().set('token', token, {
+  const cookieStore = await cookies()
+
+  cookieStore.set('token', token, {
     path: '/',
     maxAge: 60 * 60 * 24 * 7, // 7 days
   })

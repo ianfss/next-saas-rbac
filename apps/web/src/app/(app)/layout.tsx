@@ -7,7 +7,9 @@ export default async function AppLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  if (!isAuthenticated()) {
+  const authenticated = await isAuthenticated()
+
+  if (!authenticated) {
     redirect('/auth/sign-in')
   }
 

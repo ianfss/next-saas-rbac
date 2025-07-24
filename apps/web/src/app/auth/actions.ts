@@ -1,11 +1,12 @@
 'use server'
 
+import { env } from '@saas/env'
 import { redirect } from 'next/navigation'
 
 export async function signInWithGitHub() {
   const gitHubSignInURL = new URL('login/oauth/authorize', 'https://github.com')
 
-  gitHubSignInURL.searchParams.set('client_id', 'Ov23li03LyB7mft7Ol3r')
+  gitHubSignInURL.searchParams.set('client_id', env.GITHUB_OAUTH_CLIENT_ID)
   gitHubSignInURL.searchParams.set(
     'redirect_uri',
     'http://localhost:3000/api/auth/callback/github',
@@ -26,10 +27,7 @@ export async function signInWithGoogle() {
     'scope',
     'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
   )
-  googleSignInURL.searchParams.set(
-    'client_id',
-    '348931462819-it5f5hraoh12pc00qpr9arlaui5ocobr.apps.googleusercontent.com',
-  )
+  googleSignInURL.searchParams.set('client_id', env.GOOGLE_OAUTH_CLIENT_ID)
   googleSignInURL.searchParams.set(
     'redirect_uri',
     'http://localhost:3000/api/auth/callback/google',
