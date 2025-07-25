@@ -1,15 +1,22 @@
 import { env } from '@saas/env'
 import ky from 'ky'
-import { cookies } from 'next/headers'
 
 export const api = ky.create({
   prefixUrl: env.NEXT_PUBLIC_API_URL,
   hooks: {
     beforeRequest: [
       async (request) => {
-        const cookieStore = await cookies()
+        let token: string | undefined
 
-        const token = cookieStore.get('token')?.value
+        if (typeof window === 'undefined') {
+          const { cookies } = await import('next/headers')
+          const cookieStore = await cookies()
+
+          token = cookieStore.get('token')?.value
+        } else {
+          const { getCookie } = await import('cookies-next/client')
+          token = getCookie('token')
+        }
 
         if (token) {
           request.headers.set('Authorization', `Bearer ${token}`)
