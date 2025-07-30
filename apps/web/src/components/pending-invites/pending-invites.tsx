@@ -50,7 +50,7 @@ export function PendingInvites() {
         </span>
 
         {data?.invites.length === 0 && (
-          <p className="text-muted-foreground text-sm">No invites found.</p>
+          <p className="text-sm text-muted-foreground">No invites found.</p>
         )}
 
         {data?.invites.map((invite) => {
@@ -75,7 +75,7 @@ export function PendingInvites() {
                   variant="outline"
                   onClick={() => handleAcceptInvite(invite.id)}
                 >
-                  <Check className="size-3 mr-1.5" />
+                  <Check className="mr-1.5 size-3" />
                   Accept
                 </Button>
                 <Button
@@ -84,7 +84,7 @@ export function PendingInvites() {
                   className="text-muted-foreground"
                   onClick={() => handleDeclineInvite(invite.id)}
                 >
-                  <X className="size-3 mr-1.5" />
+                  <X className="mr-1.5 size-3" />
                   Decline
                 </Button>
               </div>

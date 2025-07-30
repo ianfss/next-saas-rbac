@@ -48,7 +48,7 @@ export async function MemberList() {
                   </TableCell>
                   <TableCell className="py-2.5">
                     <div className="flex flex-col">
-                      <span className="font-medium inline-flex items-center gap-2">
+                      <span className="inline-flex items-center gap-2 font-medium">
                         {member.name}
                         {member.userId === membership.userId && ' (me)'}
                         {member.userId === organization.ownerId && (
@@ -69,7 +69,7 @@ export async function MemberList() {
                         authOrganization,
                       ) && (
                         <Button size="sm" variant="ghost">
-                          <ArrowLeftRight className="size-4 mr-2" /> Transfer
+                          <ArrowLeftRight className="mr-2 size-4" /> Transfer
                           ownership
                         </Button>
                       )}
@@ -95,7 +95,7 @@ export async function MemberList() {
                             size="sm"
                             variant="destructive"
                           >
-                            <UserMinus className="size-4 mr-2" />
+                            <UserMinus className="mr-2 size-4" />
                             Remove
                           </Button>
                         </form>

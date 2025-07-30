@@ -21,7 +21,7 @@ export async function Tabs() {
             asChild
             variant="ghost"
             size="sm"
-            className="border border-transparent text-muted-foreground data-[current=true]:text-foreground data-[current=true]:border-border"
+            className="border border-transparent text-muted-foreground data-[current=true]:border-border data-[current=true]:text-foreground"
           >
             <NavLink href={`/org/${currentOrg}`}>Projects</NavLink>
           </Button>
@@ -32,7 +32,7 @@ export async function Tabs() {
             asChild
             variant="ghost"
             size="sm"
-            className="border border-transparent text-muted-foreground data-[current=true]:text-foreground data-[current=true]:border-border"
+            className="border border-transparent text-muted-foreground data-[current=true]:border-border data-[current=true]:text-foreground"
           >
             <NavLink href={`/org/${currentOrg}/members`}>Members</NavLink>
           </Button>
@@ -43,7 +43,7 @@ export async function Tabs() {
             asChild
             variant="ghost"
             size="sm"
-            className="border border-transparent text-muted-foreground data-[current=true]:text-foreground data-[current=true]:border-border"
+            className="border border-transparent text-muted-foreground data-[current=true]:border-border data-[current=true]:text-foreground"
           >
             <NavLink href={`/org/${currentOrg}/settings`}>
               Settings & Billing

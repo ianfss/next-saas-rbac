@@ -3,7 +3,7 @@ import { Slash, Squirrel } from 'lucide-react'
 import { ability } from '@/auth/auth'
 
 import { OrganizationSwitcher } from './organization-switcher'
-import { PendingInvites } from './pending-invites'
+import { PendingInvites } from './pending-invites/pending-invites'
 import { ProfileButton } from './profile-button'
 import { ProjectSwitcher } from './project-switcher'
 import { ThemeSwitcher } from './theme/theme-switcher'

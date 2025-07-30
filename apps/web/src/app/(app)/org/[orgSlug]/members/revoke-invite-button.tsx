@@ -12,7 +12,7 @@ export function RevokeInviteButton({ inviteId }: RevokeInviteButtonProps) {
   return (
     <form action={revokeInviteAction.bind(null, inviteId)}>
       <Button size="sm" variant="destructive">
-        <XOctagon className="size-4 mr-2" />
+        <XOctagon className="mr-2 size-4" />
         Revoke invite
       </Button>
     </form>

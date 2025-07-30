@@ -49,7 +49,7 @@ export async function ProjectList() {
               </span>
 
               <Button size="xs" variant="outline" className="ml-auto">
-                View <ArrowRight className="size-3 ml-2" />
+                View <ArrowRight className="ml-2 size-3" />
               </Button>
             </CardFooter>
           </Card>

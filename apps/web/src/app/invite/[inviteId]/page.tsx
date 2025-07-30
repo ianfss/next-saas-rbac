@@ -55,7 +55,7 @@ export default async function InvitePage({
 
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
-      <div className="w-full max-w-sm space-y-6 flex flex-col justify-center">
+      <div className="flex w-full max-w-sm flex-col justify-center space-y-6">
         <div className="flex flex-col items-center space-y-4">
           <Avatar className="size-16">
             {invite.author?.avatarUrl && (
@@ -64,7 +64,7 @@ export default async function InvitePage({
             <AvatarFallback />
           </Avatar>
 
-          <p className="text-center leading-relaxed text-muted-foreground text-balance">
+          <p className="text-balance text-center leading-relaxed text-muted-foreground">
             <span className="font-medium text-foreground">
               {invite.author?.name ?? 'Someone'}
             </span>{' '}
@@ -81,7 +81,7 @@ export default async function InvitePage({
         {!authenticated && (
           <form action={signInFromInvite}>
             <Button type="submit" variant="secondary" className="w-full">
-              <LogIn className="size-4 mr-2" />
+              <LogIn className="mr-2 size-4" />
               Sign in to accept the invite
             </Button>
           </form>
@@ -90,7 +90,7 @@ export default async function InvitePage({
         {authenticatedWithSameEmailFromInvite && (
           <form action={acceptInviteAction}>
             <Button type="submit" variant="secondary" className="w-full">
-              <CheckCircle className="size-4 mr-2" />
+              <CheckCircle className="mr-2 size-4" />
               Join {invite.organization.name}
             </Button>
           </form>
@@ -98,13 +98,13 @@ export default async function InvitePage({
 
         {authenticated && !authenticatedWithSameEmailFromInvite && (
           <div className="space-y-4">
-            <p className="text-balance text-muted-foreground text-center text-sm leading-relaxed">
+            <p className="text-balance text-center text-sm leading-relaxed text-muted-foreground">
               This invite was sent to{' '}
-              <span className="text-foreground font-medium">
+              <span className="font-medium text-foreground">
                 {invite.email}
               </span>{' '}
               but you're currently authenticated as{' '}
-              <span className="text-foreground font-medium">
+              <span className="font-medium text-foreground">
                 {currentUser?.email}
               </span>
               .
@@ -113,7 +113,7 @@ export default async function InvitePage({
             <div className="space-y-2">
               <Button className="w-full" variant="secondary" asChild>
                 <a href="/api/auth/sign-out">
-                  <LogOut className="size-4 mr-2" />
+                  <LogOut className="mr-2 size-4" />
                   Sign out from {currentUser?.email}
                 </a>
               </Button>

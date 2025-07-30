@@ -19,7 +19,7 @@ export function ShutdownOrganizationButton() {
   return (
     <form action={shutdownOrganizationAction}>
       <Button type="submit" variant="destructive" className="w-56">
-        <XCircle className="size-4 mr-2" />
+        <XCircle className="mr-2 size-4" />
         Shutdown organization
       </Button>
     </form>

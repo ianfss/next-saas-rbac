@@ -43,7 +43,7 @@ export function CreateInviteForm() {
       )}
 
       <div className="flex items-center gap-2">
-        <div className="space-y-1 flex-1">
+        <div className="flex-1 space-y-1">
           <Input
             id="email"
             name="email"
@@ -73,7 +73,7 @@ export function CreateInviteForm() {
             <Loader2 className="size-4 animate-spin" />
           ) : (
             <>
-              <UserPlus className="size-4 mr-2" />
+              <UserPlus className="mr-2 size-4" />
               Invite user
             </>
           )}

@@ -11,14 +11,14 @@ export default async function Projects() {
   const currentOrg = await getCurrentOrg()
 
   return (
-    <div className="py-4 space-y-4">
+    <div className="space-y-4 py-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Projects</h1>
 
         {permissions?.can('create', 'Project') && (
           <Button size="sm" asChild>
             <Link href={`/org/${currentOrg}/create-project`}>
-              <Plus className="size-4 mr-2" />
+              <Plus className="mr-2 size-4" />
               Create project
             </Link>
           </Button>
